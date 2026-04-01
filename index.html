@@ -5,40 +5,81 @@
 
     <style>
         body {
-            background-color: #ffe6f0;
+            background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
             text-align: center;
-            font-family: Arial;
-            padding-top: 100px;
+            font-family: 'Comic Sans MS', cursive;
+            padding-top: 80px;
+            overflow: hidden;
         }
 
         h1 {
             color: #ff4d6d;
+            font-size: 32px;
         }
 
         button {
             background-color: #ff4d6d;
             color: white;
             border: none;
-            padding: 12px 20px;
+            padding: 14px 24px;
             font-size: 18px;
-            border-radius: 10px;
+            border-radius: 20px;
             cursor: pointer;
+            box-shadow: 0 0 10px pink;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px hotpink;
         }
 
         #msg {
-            margin-top: 20px;
+            margin-top: 25px;
             font-size: 20px;
+            color: #333;
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: absolute;
+            color: pink;
+            font-size: 20px;
+            animation: float 5s infinite;
+        }
+
+        @keyframes float {
+            0% {transform: translateY(0);}
+            100% {transform: translateY(-800px);}
+        }
+
+        /* Cute sticker */
+        .sticker {
+            width: 120px;
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Hey you... 🥺</h1>
+    <h1>Hey you... 🥺💖</h1>
+
+    <!-- Cute sticker -->
+    <img class="sticker" src="https://media.tenor.com/8Q0J9Gg1J6wAAAAi/cute-bear.gif">
+
+    <br><br>
 
     <button onclick="nextMessage()">Don't click 😤</button>
 
     <p id="msg"></p>
+
+    <!-- Floating hearts -->
+    <div class="heart" style="left:10%">💖</div>
+    <div class="heart" style="left:30%">💕</div>
+    <div class="heart" style="left:50%">💗</div>
+    <div class="heart" style="left:70%">💞</div>
+    <div class="heart" style="left:90%">💓</div>
 
     <script>
         let count = 0;
@@ -47,30 +88,17 @@
             count++;
 
             if (count === 1) {
-                document.getElementById("msg").innerHTML =
-                "I said don't click Vishnu 😠";
+                document.getElementById("msg").innerHTML = "I said don't click Vishnuu 😠";
             }
-
             else if (count === 2) {
-                document.getElementById("msg").innerHTML =
-                "Why are you like this 😒";
+                document.getElementById("msg").innerHTML = "Why are you like this 😒";
             }
-
             else if (count === 3) {
-                document.getElementById("msg").innerHTML =
-                "Okay fine... last warning 😤💔";
+                document.getElementById("msg").innerHTML = "Okay fine... last warning 😤💔";
             }
-
             else if (count === 4) {
                 document.getElementById("msg").innerHTML =
-                "I’m really really sorry 🥺💖<br>\
-                I didn’t mean to hurt you...<br>\
-                You mean everything to me 💕<br>\
-                Please forgive me 😔<br><br>\
-                I can’t promise perfection but I wanna make you happy 💖<br>\
-                You are my comfort, my safe place, my everything 🥺<br>\
-                I miss you sooo much 😭<br>\
-                I love youuuuuu ❤️";
+                "I’m really really sorry 🥺💖<br>I didn’t mean to hurt you...<br>You mean everything to me 💕<br>Please forgive me 😔<br><br>I can’t promise perfection but I wanna make you happy 💖<br>You are my comfort, my safe place, my everything 🥺<br>I miss you sooo much 😭<br>I love youuuuuu ❤️";
             }
         }
     </script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For You ❤️</title>
+    <style>
+        body {
+            background-color: #ffe6f0;
+            text-align: center;
+            font-family: Arial;
+            padding-top: 100px;
+        }
+
+        h1 {
+            color: #ff4d6d;
+        }
+
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #msg {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hey you... 🥺</h1>
+
+    <button onclick="nextMessage()">Don't click 😤</button>
+
+    <p id="msg"></p>
+
+    <script>
+        let count = 0;
+
+        function nextMessage() {
+            count++;
+
+            if (count === 1) {
+                document.getElementById("msg").innerHTML =
+                "I said don't click 😠";
+            }
+
+            else if (count === 2) {
+                document.getElementById("msg").innerHTML =
+                "Why are you like this 😒";
+            }
+
+            else if (count === 3) {
+                document.getElementById("msg").innerHTML =
+                "Okay fine... last warning 😤💔";
+            }
+
+            else if (count === 4) {
+                document.getElementById("msg").innerHTML =
+                "I’m really really sorry 🥺💖<br>\
+                I didn’t mean to hurt you...<br>\
+                You mean everything to me 💕<br>\
+                Please forgive me 😔";
+            }
+        }
+    </script>
+
+</body>
+</html>
